@@ -1,0 +1,12 @@
+﻿@page
+@model IndexModel
+
+<div class="text-center">
+    <h1 class="display-4">Images in the container "@Model.containerName":</h1>
+    @foreach (var b in Model.blobs)
+    {
+        var path = @Model.pathcontainer + "/" + @b.Name;
+        <img src="@path">
+    }
+      
+    </div>
